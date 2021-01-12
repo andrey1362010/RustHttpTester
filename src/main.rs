@@ -6,8 +6,8 @@ use curl::easy::Easy;
 use curl::Error;
 
 fn main() {
-    let req_count = 20000;
-    const threads_count: u128 = 10;
+    let req_count = 10000;
+    const threads_count: u128 = 5;
     let start_time = time_millis();
     let mut join_array: Vec<JoinHandle<()>> = vec![];
     for t in 0..threads_count {
